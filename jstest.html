@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jstest.css">
+    <title>Test Bar</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="bar">
+            <ul>
+                <li><a href="#" id ="myhome">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Other</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form" id="form">
+        <h2>Login Form:</h2>
+        <label for="username">Username:</label><br>
+        <input type="text" id="name" placeholder="Username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password"  placeholder="Password" required ><br>
+        <input type="checkbox" name="showpass" id="showpass" onclick="showpassword()"><span>show Password</span><br>
+        <button type="button" id="mybutton">Login</button>
+    </div>
+    <script>
+        function showpassword(){
+                let Type = document.getElementById('password');
+                if(Type.type == 'password'){
+                    Type.type = 'text';
+                }
+                else{Type.type = 'password'}
+                }
+        document.getElementById('mybutton').onclick = function(){
+            let user;
+            let password;
+            user = document.getElementById('name').value;
+            password = document.getElementById('password').value;
+            if(user == "Nang" && password == "nang1234"){
+                alert("Login success");
+                
+            }
+            else{
+                alert("Incorrect input");
+                
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
